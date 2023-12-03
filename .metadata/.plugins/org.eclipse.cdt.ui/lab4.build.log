@@ -1,21 +1,14 @@
-10:13:26 **** Incremental Build of configuration Debug for project lab4 ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/command_parser_fsm.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/command_parser_fsm.d" -MT"Core/Src/command_parser_fsm.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/command_parser_fsm.o"
-../Core/Src/command_parser_fsm.c: In function 'uart_communication_fsm':
-../Core/Src/command_parser_fsm.c:59:30: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'long int' [-Wformat=]
-   59 |     sprintf((char *)str, "%s%u%s", "!ADC=", (long)ADC_value, "#\r\n");
-      |                             ~^              ~~~~~~~~~~~~~~~
-      |                              |              |
-      |                              unsigned int   long int
-      |                             %lu
-arm-none-eabi-gcc -o "lab4.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\HOME\Desktop\lab4\lab4\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+20:46:41 **** Incremental Build of configuration Debug for project lab4 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab4.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\PCPV\Desktop\stm32cubeide_1.7.01\stm32cubeide_1.7.0\lab5\MCU_LAB4\lab4\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: lab4.elf
  
 arm-none-eabi-size   lab4.elf 
 arm-none-eabi-objdump -h -S  lab4.elf  > "lab4.list"
 arm-none-eabi-objcopy  -O ihex  lab4.elf  "lab4.hex"
    text	   data	    bss	    dec	    hex	filename
-  16484	    128	   1912	  18524	   485c	lab4.elf
+  17840	    128	   2720	  20688	   50d0	lab4.elf
 arm-none-eabi-objcopy  -O binary  lab4.elf  "lab4.bin"
 Finished building: default.size.stdout
  
@@ -26,5 +19,5 @@ Finished building: lab4.bin
 Finished building: lab4.list
  
 
-10:13:27 Build Finished. 0 errors, 1 warnings. (took 1s.906ms)
+20:46:42 Build Finished. 0 errors, 0 warnings. (took 656ms)
 

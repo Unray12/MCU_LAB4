@@ -73,6 +73,7 @@ void uart_communication_fsm() {
 			}
 			break;
 		case END:
+			memset(str, 0, sizeof(str));
 			sprintf((char*)str, "%s", "END\r\n");
 			HAL_UART_Transmit(&huart2, (void*)str, sizeof(str), 50);
 			status1 = END + 1;

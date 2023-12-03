@@ -4,7 +4,6 @@
  *  Created on: Nov 27, 2019
  *      Author: VAIO
  */
-//#include "Arduino.h"
 #include "scheduler.h"
 
 typedef struct {

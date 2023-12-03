@@ -1,0 +1,19 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 18, 2023
+ *      Author: PCPV
+ */
+
+#ifndef SRC_GLOBAL_C_
+#define SRC_GLOBAL_C_
+
+#include"global.h"
+
+int status = 1;
+
+int commandCheck(char *str) {
+	if (str[0] == 'R' && str[1] == 'S' && str[2] == 'T' && str[3] == "#")
+		return 1;
+}
+#endif /* SRC_GLOBAL_C_ */

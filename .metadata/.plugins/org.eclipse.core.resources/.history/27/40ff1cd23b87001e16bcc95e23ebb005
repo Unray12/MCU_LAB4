@@ -1,0 +1,18 @@
+/*
+ * global.c
+ *
+ *  Created on: Nov 18, 2023
+ *      Author: PCPV
+ */
+
+#ifndef SRC_GLOBAL_C_
+#define SRC_GLOBAL_C_
+
+#include"global.h"
+
+int status = 1;
+
+int commandCheck() {
+
+}
+#endif /* SRC_GLOBAL_C_ */
